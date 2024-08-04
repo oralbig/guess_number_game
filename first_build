@@ -1,0 +1,16 @@
+import random
+def guess_number():
+    s = random.randint(1, 100)
+    user_number = int(input('Guess the number: '))
+    flag = True
+    while flag:
+        if user_number > s:
+            print('Your number is bigger')
+            user_number = int(input('Guess the number: '))
+        elif user_number < s:
+            print('Your number is smaller')
+            user_number = int(input('Guess the number: '))
+        else:
+            print('You won!')
+            flag = False
+guess_number()
